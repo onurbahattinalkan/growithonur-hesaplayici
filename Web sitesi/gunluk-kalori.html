@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günlük Kalori Hesaplayıcı</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h2>Günlük Kalori Hesaplayıcı</h2>
+    <form id="gunluk-kalori-form">
+        <label for="kg">Kilo (kg):</label>
+        <input type="number" id="kg" name="kg" min="10" max="300" required><br>
+        <label for="yag-orani">Yağ Oranı (%):</label>
+        <input type="number" id="yag-orani" name="yag-orani" required><br>
+        <label for="aktivite-seviyesi">Aktivite Seviyesi:</label>
+        <select id="aktivite-seviyesi" name="aktivite-seviyesi" required>
+            <option value="">Seçiniz</option>
+            <option value="hareketsiz">Hareketsiz (Minimal Aktivite)</option>
+            <option value="hafif-aktif">Hafif Aktif (Haftada 1-3 gün egzersiz)</option>
+            <option value="orta-aktif">Orta Aktif (Haftada 3-5 gün egzersiz)</option>
+            <option value="cok-aktif">Çok Aktif (Haftada 6-7 gün yoğun egzersiz)</option>
+            <option value="asiri-aktif">Aşırı Aktif (Yoğun spor + fiziksel iş)</option>
+        </select><br>
+        <button type="submit">Hesapla</button>
+    </form>
+    <p style="text-align: center;">Girilen değerlere göre günlük kalori ihtiyacını hesaplar ve sonucu gösterir.</p>
+    <div id="gunluk-kalori-result" class="result"></div>
+
+    <div class="tab-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="index.html">Ana Sayfaya Dön</a>
+    </div>
+
+
+    <div class="content">
+        <h3>Günlük Kalori İhtiyacı Nedir?</h3>
+        
+        <p>Kalori, vücudun hayatta kalmak ve enerji üretmek için ihtiyaç duyduğu temel birimdir. Günlük kalori ihtiyacı, kişinin yaşına, cinsiyetine, kilosuna, boyuna ve fiziksel aktivite düzeyine göre değişiklik gösterir.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="pictures/akdeniz-tipi-diyet.jpg" alt="Akdeniz tipi diyet" style="max-width: 30%; height: auto;">
+        </div>
+        <h3>Kalori İhtiyacı Nasıl Hesaplanır?</h3>
+        <h4>Bazal Metabolizma Hızı (BMR)</h4>
+        <p>BMR, vücudun dinlenme halinde iken harcadığı minimum enerji miktarıdır. Harris-Benedict ve Katch-McArdle gibi formüller kullanılarak hesaplanabilir.</p>
+        <ul>
+            <li><strong>Harris-Benedict Formülü:</strong> Yaş, kilo, boy ve cinsiyete göre bir hesaplama yapılır.</li>
+            <li><strong>Katch-McArdle Formülü:</strong> Yağsız vücut kütlesini baz alarak daha hassas bir sonuç verir.</li>
+        </ul>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="pictures/et.jpg" alt="et" style="max-width: 30%; height: auto;">
+        </div>
+        <h4>Fiziksel Aktivite Düzeyi</h4>
+        <p>Günlük aktiviteler ve spor, kalori ihtiyacını artırır. Aktivite seviyelerine göre BMR belirli bir katsayı ile çarpılarak toplam kalori ihtiyacı hesaplanır:</p>
+        <ul>
+            <li>Sedanter (Hareketsiz): BMR × 1.2</li>
+            <li>Hafif Aktif: BMR × 1.375</li>
+            <li>Orta Aktif: BMR × 1.55</li>
+            <li>Çok Aktif: BMR × 1.725</li>
+        </ul>
+
+        <h3>Hedeflere Göre Kalori Ayarlamaları</h3>
+        <h4>Kilo Vermek:</h4>
+        <p>Günlük kalori ihtiyacınızdan 500-750 kalori daha az alın. Yavaş ve sürdürülebilir kilo kaybı için uygundur (haftada yaklaşık 0.5-1 kg).</p>
+
+        <h4>Kilo Almak:</h4>
+        <p>Günlük ihtiyacınızdan 250-500 kalori fazlası ile beslenin. Sağlıklı kilo alımı için protein ve kompleks karbonhidrat ağırlıklı bir beslenme tercih edilmelidir.</p>
+
+        <h4>Kas Geliştirmek:</h4>
+        <p>Kalori ihtiyacınızın %10-15 üzerine çıkın ve protein alımını artırın (günde vücut ağırlığı başına 1.6-2.2 g protein).</p>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="pictures/protein-diyeti-nedir.jpg" alt="protein" style="max-width: 30%; height: auto;">
+        </div>
+
+        <h3>Makro Besin Dağılımı Neden Önemlidir?</h3>
+        <h4>Protein</h4>
+        <p>Kas kütlesini korumak ve artırmak için kritik bir rol oynar. Önerilen alım: Günlük kalorinin %25-30’u.</p>
+
+        <h4>Karbonhidrat</h4>
+        <p>Ana enerji kaynağıdır. Fiziksel performansı destekler. Önerilen alım: Günlük kalorinin %45-55’i.</p>
+
+        <h4>Yağ</h4>
+        <p>Hormon üretimi ve beyin sağlığı için gereklidir. Önerilen alım: Günlük kalorinin %20-30’u.</p>
+
+        <h3>Sonuç</h3>
+        <p>Günlük kalori ihtiyacını anlamak, sağlıklı bir yaşam tarzı oluşturmak için temel bir adımdır. Hedeflere uygun kalori planlaması ve dengeli makro besin alımı ile sağlıklı kilo kontrolü sağlanabilir. Düzenli takip ve doğru beslenme alışkanlıkları, hem fiziksel hem de mental sağlık için vazgeçilmezdir.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yağ Oranı Hesaplayıcı</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Yağ Oranı Hesaplayıcı</h2>
+    <form id="yag-orani-form">
+        <label for="cinsiyet">Cinsiyet:</label>
+        <select id="cinsiyet" name="cinsiyet" required>
+            <option value="">Seçiniz</option>
+            <option value="erkek">Erkek</option>
+            <option value="kadin">Kadın</option>
+        </select><br>
+        <label for="boy">Boy (cm):</label>
+        <input type="number" id="boy" name="boy" min="100" max="230" required><br>
+        <label for="boyun-cevresi">Boyun Çevresi (cm):</label>
+        <input type="number" id="boyun-cevresi" name="boyun-cevresi" min="15" max="70" required><br>
+        <label for="bel-cevresi">Bel Çevresi (cm):</label>
+        <input type="number" id="bel-cevresi" name="bel-cevresi" min="30" max="250" required><br>
+        <div id="kalca-cevresi-container" style="display: none;">
+            <label for="kalca-cevresi">Kalça Çevresi (cm):</label>
+            <input type="number" id="kalca-cevresi" name="kalca-cevresi" min="30" max="250"><br>
+        </div>
+        <button type="submit">Hesapla</button>
+    </form>
+    <p style="text-align: center;">Girilen değerlere göre yağ oranını hesaplar ve sonucu gösterir.</p>
+    <div id="yag-orani-result" class="result"></div>
+    <div class="tab-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="index.html">Ana Sayfaya Dön</a>
+    </div>
+
+    <h2 style="text-align: left; margin-left: 20%;">Vücut yağ oranı tablosu:</h2>
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="pictures/yag_oranı_tablosu.png" alt="Yağ Oranı Tablosu" style="max-width: 60%; height: auto;">
+    </div></div>
+
+    <div class="content">
+        <h3>Yağ Oranı Nedir?</h3>
+        <p>Vücut yağ oranı, vücudunuzdaki yağ kütlesinin toplam vücut kütlenize oranıdır. Bu değer, genel sağlık durumunuzu ve vücudunuzdaki yağ dağılımını anlamak için önemli bir göstergedir. Aşırı yüksek ya da düşük yağ oranı, sağlık sorunlarına yol açabilir.</p>
+
+        <h3>Yağ Oranı Nasıl Hesaplanır?</h3>
+        <p>Yağ oranını hesaplamak için çeşitli yöntemler kullanılabilir:</p>
+        <ul>
+            <li><strong>Biyoelektrik İmpedans (BIA):</strong> Çoğu tartı cihazında bulunan bu teknoloji, vücutta elektrik akımının geçiş hızını ölçerek yağ oranını belirler.</li>
+            <li><strong>Kaliper Ölçümü:</strong> Cilt altındaki yağ dokusu, vücudun belirli noktalarından ölçülür ve formüllerle yağ oranı hesaplanır.</li>
+            <li><strong>DEXA Tarama:</strong> Daha gelişmiş bir yöntemdir ve vücut bileşimini oldukça hassas bir şekilde ölçer.</li>
+            <li><strong>Online Hesaplayıcılar:</strong> Bel, kalça, boy ve kilo gibi verileri kullanarak yaklaşık bir yağ oranı tahmini yapılabilir.</li>
+        </ul>
+        <p>Bu yöntemlerden birini kullanarak yağ oranınızı öğrenebilirsiniz, ancak en kesin sonuç için profesyonel bir ölçüm tercih edilmelidir.</p>
+
+        <h3>Yağ Oranı Nasıl Düşürülür?</h3>
+        <p>Yağ oranını sağlıklı bir şekilde düşürmek için dengeli bir yaklaşım benimsemek önemlidir:</p>
+        <ul>
+            <li><strong>Düzenli Egzersiz:</strong>
+                <ul>
+                    <li>Kardiyo egzersizleri (koşu, bisiklet, yüzme) yağ yakımını artırır.</li>
+                    <li>Ağırlık antrenmanları kas kütlesini artırarak metabolizmayı hızlandırır.</li>
+                </ul>
+            </li>
+            <li><strong>Dengeli Beslenme:</strong>
+                <ul>
+                    <li>Şekerli ve işlenmiş gıdalardan kaçının.</li>
+                    <li>Protein ağırlıklı beslenin; tavuk, balık, yumurta ve baklagiller gibi gıdaları tüketin.</li>
+                    <li>Sebze ve sağlıklı yağ kaynaklarını (zeytinyağı, avokado, kuruyemiş) dahil edin.</li>
+                </ul>
+            </li>
+            <li><strong>Kalori Açığı Oluşturun:</strong> Günlük enerji ihtiyacınızdan daha az kalori alarak vücut yağlarını azaltabilirsiniz. Ancak bu açığı abartmamak önemli; yavaş ve sürdürülebilir bir kilo kaybı hedeflenmelidir.</li>
+            <li><strong>Uyku ve Stres Yönetimi:</strong> Yetersiz uyku ve kronik stres, yağ yakımını zorlaştırabilir. Günde 7-9 saat uyumak ve stres yönetimi tekniklerini uygulamak faydalıdır.</li>
+        </ul>
+
+        <h3>Vücut Yağ Oranının Önemi</h3>
+        <ul>
+            <li><strong>Sağlık Risklerini Azaltır:</strong> Yüksek yağ oranı, obezite, diyabet, kalp hastalıkları ve yüksek tansiyon gibi sorunlarla ilişkilidir.</li>
+            <li><strong>Fiziksel Performansı Artırır:</strong> İdeal yağ oranı, spor performansını iyileştirir ve enerjik hissetmenizi sağlar.</li>
+            <li><strong>Estetik ve Özgüven:</strong> Daha dengeli bir yağ oranı, fiziksel görünümünüzü iyileştirerek kendinize olan güveninizi artırabilir.</li>
+            <li><strong>Hormonal Dengeyi Korur:</strong> Aşırı düşük veya yüksek yağ oranı, hormonların düzgün çalışmasını etkileyebilir. Kadınlar için aşırı düşük yağ oranı adet döngüsünü bozabilir.</li>
+        </ul>
+
+        <h3>İdeal Yağ Oranı</h3>
+        <p>Yaş, cinsiyet ve fiziksel aktivite düzeyine göre değişmekle birlikte genel ideal aralıklar:</p>
+        <ul>
+            <li><strong>Kadınlar:</strong> %20-30</li>
+            <li><strong>Erkekler:</strong> %10-20</li>
+        </ul>
+        <p>Yağ oranınızı sağlıklı bir aralıkta tutmak, hem fiziksel hem de mental sağlık için kritik öneme sahiptir.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

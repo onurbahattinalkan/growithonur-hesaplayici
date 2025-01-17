@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İdeal Kilo Hesaplayıcı</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h2>İdeal Kilo Hesaplayıcı</h2>
+    <form id="ideal-kilo-form">
+        <label for="boy">Boy (cm):</label>
+        <input type="number" id="boy" name="boy" min="100" max="230" required><br>
+        <label for="kilo">Kilo (kg):</label>
+        <input type="number" id="kilo" name="kilo" min="10" max="300" required><br>
+        <label for="cinsiyet">Cinsiyet:</label>
+        <select id="cinsiyet" name="cinsiyet" required>
+            <option value="">Seçiniz</option>
+            <option value="erkek">Erkek</option>
+            <option value="kadin">Kadın</option>
+        </select><br>
+        <button type="submit">Hesapla</button>
+    </form>
+    <p style="text-align: center;">Girilen değerlere göre ideal kilo hesaplaması yapar ve sonucu gösterir.</p>
+    <div id="ideal-kilo-result" class="result"></div>
+
+    <div class="tab-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="index.html">Ana Sayfaya Dön</a>
+    </div>
+    <div class="content">
+        <h3>İdeal Kilo Nedir ve Neden Önemlidir?</h3>
+        <p>İdeal kilo, bireyin sağlık açısından optimal düzeyde olduğu vücut ağırlığını ifade eder. İlk olarak 1974 yılında Ben J. Devine tarafından ortaya atılan bu kavram, özellikle obez hastaların ilaç metabolizmasının tahmin edilmesinde kullanılmaya başlanmıştır. Bununla birlikte, ideal kilo yalnızca vücut ağırlığının sağlığa etkilerini değerlendirmekle kalmaz, aynı zamanda bireyin genel yaşam kalitesini de iyileştirmeye yönelik bir rehber sunar.</p>
+
+        <h3>İdeal Kiloya Ulaşmak İçin 5 Pratik İpucu</h3>
+        <ul>
+            <li><strong>Hedef Belirleyin:</strong> Sağlıklı ve gerçekçi hedefler belirleyin. Haftada 0,5-1 kg kaybetmek, sürdürülebilir bir kilo verme hedefidir.</li>
+            <li><strong>Beslenmenize Odaklanın:</strong> Şekerli içecekleri sınırlayın, protein ağırlıklı beslenmeye özen gösterin ve sebze-meyve tüketiminizi artırın.</li>
+            <li><strong>Düzenli Egzersiz Yapın:</strong> Haftalık en az 150 dakika orta yoğunlukta egzersiz (yürüyüş, koşu, bisiklet) yapmaya çalışın. Ağırlık antrenmanlarıyla kas kütlenizi artırabilirsiniz.</li>
+            <li><strong>Suyunuzu Takip Edin:</strong> Yeterli miktarda su tüketmek metabolizmayı hızlandırabilir ve tokluk hissini artırabilir.</li>
+            <li><strong>Uyku Düzeninizi Sağlayın:</strong> Her gece 7-9 saat uyumak, hormon dengenizi koruyarak kilo kontrolüne yardımcı olur.</li>
+        </ul>
+
+        <h3>İdeal Kilonun Önemi</h3>
+        <ul>
+            <li><strong>Hastalık Risklerini Azaltır:</strong> Diyabet, kalp hastalıkları ve yüksek tansiyon gibi sorunlara yakalanma riskinizi düşürür.</li>
+            <li><strong>Fiziksel Performansı Artırır:</strong> Günlük aktivitelerde daha enerjik olmanızı sağlar.</li>
+            <li><strong>Estetik ve Özgüven:</strong> Dengeli bir kiloya ulaşmak, hem görünümünüzü hem de özgüveninizi destekler.</li>
+        </ul>
+        <p>Unutmayın, ideal kilo yalnızca bir sayıdan ibaret değildir. Sağlıklı bir yaşam tarzı benimsemek ve bu süreci sabırla ilerletmek, uzun vadeli başarı için esastır.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
